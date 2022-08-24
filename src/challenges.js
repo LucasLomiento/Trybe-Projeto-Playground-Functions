@@ -67,25 +67,46 @@ function fizzBuzz(arr) {
 // Desafio 9
 function encode(str) {
   let vowels = ['a', 'e', 'i', 'o', 'u'];
-  for (let vowel of vowels){
+  for (let vowel of vowels) {
     let code = vowels.indexOf(vowel) + 1;
-    str = str.replaceAll(vowel, code.toString())
+    str = str.replaceAll(vowel, code.toString());
   }
-  return str
+  return str;
 }
 
 function decode(str) {
   let vowels = ['a', 'e', 'i', 'o', 'u'];
-  for (let vowel of vowels){
+  for (let vowel of vowels) {
     let code = vowels.indexOf(vowel) + 1;
-    str = str.replaceAll(code.toString(), vowel)
+    str = str.replaceAll(code.toString(), vowel);
   }
-  return str
+  return str;
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arr, str) {
+  let techListResult = [];
+  if (arr.length === 0) return 'Vazio!'; 
+
+  for (let techIndex in arr.sort()) {
+    if(arr.length - 1 != techIndex) {
+      techListResult.push(
+        {
+          tech: arr[techIndex],
+          name: str
+        },
+      )
+    } else {
+      techListResult.push(
+        {
+          tech: arr[techIndex],
+          name: str
+        }
+      )
+    }
+  }
+
+  return techListResult
 }
 
 module.exports = {
