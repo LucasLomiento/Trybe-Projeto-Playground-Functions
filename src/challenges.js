@@ -65,11 +65,22 @@ function fizzBuzz(arr) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  for (let vowel of vowels){
+    let code = vowels.indexOf(vowel) + 1;
+    str = str.replaceAll(vowel, code.toString())
+  }
+  return str
 }
-function decode() {
-  // seu código aqui
+
+function decode(str) {
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  for (let vowel of vowels){
+    let code = vowels.indexOf(vowel) + 1;
+    str = str.replaceAll(code.toString(), vowel)
+  }
+  return str
 }
 
 // Desafio 10
