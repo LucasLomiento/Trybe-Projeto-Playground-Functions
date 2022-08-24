@@ -16,13 +16,24 @@ function generatePhoneNumber(arr) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(ladoA, ladoB, ladoC) {
+  if ( (ladoA < ladoB + ladoC) && (ladoB < ladoA + ladoC) && (ladoC < ladoB + ladoA) && (ladoA > Math.abs(ladoB - ladoC)) && (ladoB > Math.abs(ladoA - ladoC)) && (ladoC > Math.abs(ladoA - ladoB)) ) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13.
-function hydrate() {
-  // seu código aqui
+function hydrate(str) {
+  let sumOfCups = 0;
+  for(let char of str) {
+    if(Number.isInteger(parseInt(char))) {
+      sumOfCups += parseInt(char);
+    }
+  }
+
+  return (sumOfCups > 1) ? `${sumOfCups} copos de água` : `${sumOfCups} copo de água`;
 }
 
 module.exports = {
